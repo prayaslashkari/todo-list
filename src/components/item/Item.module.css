@@ -1,0 +1,27 @@
+.container{
+
+}
+
+.inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.inner div h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.inner>div:nth-child(2){
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.inner>div:nth-child(3){
+    cursor: pointer;
+    margin-left: 20px;
+}

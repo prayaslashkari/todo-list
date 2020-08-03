@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.inner{
+  margin-top: 50px;
+  border: red solid 1px;
+}
+

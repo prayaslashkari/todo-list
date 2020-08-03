@@ -1,0 +1,15 @@
+.container{
+
+}
+
+
+.inner{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(206, 82, 10);
+    margin: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
