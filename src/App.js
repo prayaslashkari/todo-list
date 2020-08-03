@@ -35,7 +35,9 @@ function App() {
   }
 
   let moveAllB = () => {
-    setTodoB(todo);
+    let temp = [...todo, ...todoB]
+    temp.map((each,index) => each.key = index+1)
+    setTodoB(temp);
     console.log(todoB)
   }
   
