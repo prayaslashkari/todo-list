@@ -41,18 +41,21 @@ function App() {
   
 
   const handleSubmit = (evt) => {
-    evt.preventDefault();
-    setTodo([{"key" : todo.length+1, "description" : input}, ...todo])
+    if(!input)
+    {
+      alert("entered a null value")
+    }
+    else{
+      evt.preventDefault();
+      setTodo([{"key" : todo.length+1, "description" : input}, ...todo])
+    }
 }
 
 
   return (
 
     <div className={styles.container}>
-      <div className={styles.top}>
-        <Board/>
-      </div>
-
+    
       <div className={styles.bottom}>
       
           <List 
@@ -63,12 +66,12 @@ function App() {
             name={"A"} 
             disable={false}/>
             
-            <form onSubmit={handleSubmit}>
+            <form style={{fontFamily: 'Montserrat', fontSize: "20px", marginTop: "20px"}} onSubmit={handleSubmit}>
               <label>
                 Add your own text
-                <input onChange={e => setInput(e.target.value)} type="text" name="name" />
+                <input style={{fontFamily: 'Montserrat', fontSize: "20px", marginTop: "20px", marginLeft: "20px"}} onChange={e => setInput(e.target.value)} type="text" name="name" />
               </label>
-              <input  type="submit" value="Submit" />
+              <input style={{fontFamily: 'Montserrat', fontSize: "20px", marginTop: "20px", border: "none", backgroundColor: "lightGreen",color: "white", padding: "10px 20px",borderRadius: "20px" ,boxShadow: "4px 20px 41px -20px rgba(0,0,0,0.0)", marginLeft: "20px"}}  type="submit" value="Submit" />
             </form>
 
           <div>
@@ -84,6 +87,10 @@ function App() {
             
           {/* <button onClick={() => add ()}>Add</button>
           <button onClick={() => deleteM(1)}>Delete</button> */}
+      </div>
+
+      <div className={styles.top}>
+        <Board/>
       </div>
     </div>
   );

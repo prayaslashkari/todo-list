@@ -8,7 +8,7 @@ const Item = ({handleDel, handleMove, index, description, disable}) => {
                 <div><h1>{description}</h1></div>
                 
                 { !disable ? 
-                    <div>
+                    <div className={styles.innerGrid}>
                         <div><img 
                             onClick={()=>handleDel(index)} 
                             src="https://img.icons8.com/flat_round/28/000000/delete-sign.png"

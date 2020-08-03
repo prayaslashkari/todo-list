@@ -7,6 +7,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.form{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 20px;
+}
+
 .container{
   margin: 100px 0;
 }
@@ -32,6 +37,13 @@
   border-radius: 50px;
   box-shadow: 4px 20px 41px -20px rgba(0,0,0,0.45);
 }
+
+.moveAll:focus{
+  outline: none;
+  border: none;
+
+}
+
 
 .moveAll:hover{
   background-color: #4192ee;

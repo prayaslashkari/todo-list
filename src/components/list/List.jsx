@@ -19,13 +19,16 @@ const List = ({name,array,disable,handleAdd,handleDel,handleMove}) => {
 
 
                 {array.map((each) => 
-                    <Item 
-                        handleMove={handleMove}
-                        handleDel={handleDel} 
-                        key={each.key} 
-                        index={each.key}
-                        description={each.description} 
-                        disable={disable}/>)}
+                    <div className={styles.itemMain}>
+                        <Item 
+                            handleMove={handleMove}
+                            handleDel={handleDel} 
+                            key={each.key} 
+                            index={each.key}
+                            description={each.description} 
+                            disable={disable}/>
+                    </div>
+                    )}
             </div>
         </div>
      );
