@@ -11,7 +11,7 @@ function App() {
       { "key" : 2,
         "description": "I am perfectly Noob"},
       { "key" : 3,
-        "description":" Hi Ritesh"}
+        "description":" Hi Ritesh, Here is the Assignment"}
     ])
 
   let add = () => {
@@ -60,9 +60,10 @@ function App() {
             
           {/* <button onClick={() => add ()}>Add</button>
           <button onClick={() => deleteM(1)}>Delete</button> */}
-
-          <button onClick={()=>moveAllB()}>Move ALL</button>
-          <button onClick={()=>moveToB(9,"my name is khan")}>Move to B</button>
+          <div>
+              <button className={styles.moveAll} onClick={()=>moveAllB()}>Move ALL</button>
+              {/* <button className={styles.moveTo} onClick={()=>moveToB(9,"my name is khan")}>Move to B</button> */}
+          </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Item = ({handleDel, handleMove, index, description, disable}) => {
                 <div><h1>{description}</h1></div>
                 
                 { !disable ? 
-                    <React.Fragment>
+                    <div>
                         <div><img 
                             onClick={()=>handleDel(index)} 
                             src="https://img.icons8.com/flat_round/28/000000/delete-sign.png"
@@ -19,7 +19,7 @@ const Item = ({handleDel, handleMove, index, description, disable}) => {
                             onClick={()=>handleMove(index,description)} 
                             src="https://img.icons8.com/color/28/000000/move-stock.png"
                             title="Move to B"/></div>
-                    </React.Fragment> : ""
+                    </div> : ""
                 }
             </div>
         </div>
