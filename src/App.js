@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import styles from './App.module.css';
 import {List,Board} from './components/index';
 
 function App() {
+
+  const [input,setInput] = useState("")
 
   const [todo, setTodo] = useState(
     [
@@ -37,6 +39,13 @@ function App() {
     console.log(todoB)
   }
   
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    setTodo([{"key" : todo.length+1, "description" : input}, ...todo])
+}
+
+
   return (
 
     <div className={styles.container}>
@@ -45,6 +54,7 @@ function App() {
       </div>
 
       <div className={styles.bottom}>
+      
           <List 
             handleDel={deleteM}  
             handleAdd={()=> add()} 
@@ -53,6 +63,14 @@ function App() {
             name={"A"} 
             disable={false}/>
             
+            <form onSubmit={handleSubmit}>
+              <label>
+                Add your own text
+                <input onChange={e => setInput(e.target.value)} type="text" name="name" />
+              </label>
+              <input  type="submit" value="Submit" />
+            </form>
+
           <div>
               <button className={styles.moveAll} onClick={()=>moveAllB()}>Move All to B</button>
               {/* <button className={styles.moveTo} onClick={()=>moveToB(9,"my name is khan")}>Move to B</button> */}
