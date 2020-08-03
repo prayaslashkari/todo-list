@@ -52,6 +52,12 @@ function App() {
             array={todo} 
             name={"A"} 
             disable={false}/>
+            
+          <div>
+              <button className={styles.moveAll} onClick={()=>moveAllB()}>Move All to B</button>
+              {/* <button className={styles.moveTo} onClick={()=>moveToB(9,"my name is khan")}>Move to B</button> */}
+          </div>
+
           <List 
             name={"B"} 
             disable={true}
@@ -60,10 +66,6 @@ function App() {
             
           {/* <button onClick={() => add ()}>Add</button>
           <button onClick={() => deleteM(1)}>Delete</button> */}
-          <div>
-              <button className={styles.moveAll} onClick={()=>moveAllB()}>Move ALL</button>
-              {/* <button className={styles.moveTo} onClick={()=>moveToB(9,"my name is khan")}>Move to B</button> */}
-          </div>
       </div>
     </div>
   );
